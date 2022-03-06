@@ -1,10 +1,16 @@
+import Head from 'next/head'
+import { Fragment } from 'react'
 import ContactForm from '../components/contact/ContactForm'
 
 function ContactPage() {
     return (
-        <div>
+        <Fragment>
+            <Head>
+                <title>Blog</title>
+                <meta name="description" content="blog" />
+            </Head>
             <ContactForm />
-        </div>
+        </Fragment>
     )
 }
 

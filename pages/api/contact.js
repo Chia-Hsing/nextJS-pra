@@ -1,6 +1,7 @@
+import { MongoClient } from 'mongodb'
 // /api/contact
 
-const handler = (req, res) => {
+const handler = async (req, res) => {
     if (req.method === 'POST') {
         const { email, message, name } = req.body
 
@@ -17,7 +18,7 @@ const handler = (req, res) => {
 
         let client
 
-        const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.ntrwp.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`
+        const connectionString = process.env.mongodb_url
 
         try {
             client = await MongoClient.connect(connectionString)

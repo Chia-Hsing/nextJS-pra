@@ -1,5 +1,4 @@
 import ReactDOM from 'react-dom'
-
 import classes from './notification.module.css'
 
 function Notification(props) {
@@ -22,7 +21,7 @@ function Notification(props) {
             <h2>{title}</h2>
             <p>{message}</p>
         </div>,
-        document.getElementById('notifications')
+        document.getElementById('notification')
     )
 }
 
